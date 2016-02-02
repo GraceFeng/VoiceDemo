@@ -43,7 +43,7 @@
                 console.log("Windows namespace is unavaiable");
             }
             var uri = new Windows.Foundation.Uri("ms-appx:///vcd.xml");
-            Windows.Storage.StorageFile.getFileFromApplicationUriAsync("ms-appx:///vcd.xml").then(function (e) {
+            Windows.Storage.StorageFile.getFileFromApplicationUriAsync(uri).then(function (e) {
                 Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinitionManager.installCommandDefinitionsFromStorageFileAsync(e);
             });
 
