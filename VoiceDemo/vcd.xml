@@ -6,9 +6,22 @@
     <Command Name="Search">
       <Example>search {message} using VoiceDemo</Example>
       <ListenFor RequireAppName="BeforeOrAfterPhrase">Search {searchTerm}</ListenFor>
-      <Feedback>Searching for "{searchTerm}" with VoiceDemo</Feedback>
+      <Feedback>Searching "{searchTerm}" with VoiceDemo</Feedback>
+      <Navigate Target="/home/about" />
+    </Command>
+    <Command Name="Open">
+      <Example>open {message} using VoiceDemo</Example>
+      <ListenFor RequireAppName="BeforeOrAfterPhrase">Open {openTerm}</ListenFor>
+      <Feedback>Opening "{openTerm}" with VoiceDemo</Feedback>
+      <Navigate Target="/home/about" />
+    </Command>
+    <Command Name="Find">
+      <Example>find {message} using VoiceDemo</Example>
+      <ListenFor RequireAppName="BeforeOrAfterPhrase">Find {openTerm}</ListenFor>
+      <Feedback>Finding "{openTerm}" with VoiceDemo</Feedback>
       <Navigate Target="/home/about" />
     </Command>
     <PhraseTopic Label="searchTerm" Scenario="Natural Language" />
+    <PhraseTopic Label="openTerm" />
   </CommandSet>
 </VoiceCommands>
